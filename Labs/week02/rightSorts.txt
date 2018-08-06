@@ -1,0 +1,13 @@
+z5077896@flute15:~/cs1927/labs/week02$ ./gen 100 R > mydata                    
+z5077896@flute15:~/cs1927/labs/week02$ wc -l mydata
+100 mydata
+z5077896@flute15:~/cs1927/labs/week02$ ./sortA < mydata > sortedA
+z5077896@flute15:~/cs1927/labs/week02$ ./sortA < mydata > sortedB
+z5077896@flute15:~/cs1927/labs/week02$ wc -l sortedA
+100 sortedA
+z5077896@flute15:~/cs1927/labs/week02$ wc -l sortedB
+100 sortedB
+z5077896@flute15:~/cs1927/labs/week02$ sort -n < mydata > sorted
+z5077896@flute15:~/cs1927/labs/week02$ diff sorted sortedA
+z5077896@flute15:~/cs1927/labs/week02$ diff sorted sortedB
+

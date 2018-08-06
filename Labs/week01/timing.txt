@@ -1,0 +1,47 @@
+Input	Initial	Has	Number	AvgTime	        AvgTime
+Size	Order	Dups	of runs	forusel	        forsort
+1000    random  no      5       0.012sec        0.003sec
+1000    sorted  no      5       0.003sec        0.003sec
+1000    reverse no      5       0.003sec        0.003sec
+1000    random  yes     5       0.006sec        0.004sec
+1000    sorted  yes     5       0.004sec        0.004sec
+1000    reverse yes     5       0.004sec        0.003sec
+5000	random	no	    5	    0.107sec	    0.007sec
+5000	sorted	no	    5	0.005sec	0.004sec
+5000	reverse	no	    5	0.003sec	0.004sec
+5000	random	yes	5	0.168sec	0.009sec
+5000	sorted	yes	5	0.004sec	0.004sec
+5000	reverse	yes	5	0.003sec	0.004sec
+10000	random	no	5	0.420sec	0.054sec
+10000	sorted	no	5	0.004sec	0.004sec
+10000	reverse	no	5	0.006sec	0.004sec
+10000	random	yes	5	0.698sec	0.016sec
+10000	sorted	yes	5	0.003sec	0.003sec
+10000	reverse	yes	5	0.003sec	0.003sec
+20000   random  no      5       0.889sec        0.010sec
+20000   sorted  no      5       0.004sec        0.004sec
+20000   reverse no      5       0.003sec        0.003sec
+20000   random  yes     5       2.215sec        0.021sec
+20000   sorted  yes     5       0.005sec        0.003sec
+20000   reverse yes     5       0.004sec        0.003sec
+50000   random  no      5       5.690sec        0.038sec
+50000   sorted  no      5       0.005sec        0.003sec
+50000   reverse no      5       0.003sec        0.003sec
+50000   random  yes     5      23.097sec        0.073sec
+50000   sorted  yes     5       0.004sec        0.003sec
+50000   reverse yes     5       0.004sec        0.003sec
+
+Comments: 
+1. For any size of input, the time use for "usel" and "sort" are all
+very small which is always smaller than 0.01 second, no matter is sorted 
+or reverse, duplicates or not.
+   The reason is for usel and sort, they just need to check whether the
+numbers has been sorted, no need to do many complex application.
+
+2. It needs more time for both usel and sort when there are duplicates.
+   When there are more same numbers, more time is needed to compare 
+and sort.
+
+3. Usel usually takes more time to sort than the UNIX sort function, when 
+the size of input increasing, the difference becomes larger. 
+   The algorithem of sort is better.
