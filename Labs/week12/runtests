@@ -1,0 +1,15 @@
+#!/bin/sh
+
+nwords=1000000
+
+for nslots in 85711 100000 214283 400000 400837 857144 857137
+do 
+    echo ""
+    echo "Test: ./mkwords $nwords | ./words - $nslots"
+    ./mkwords $nwords | ./words - $nslots
+done 
+
+./words /home/cs1927/web/16s2/labs/week12/places 1048576
+
+./words /home/cs1927/web/16s2/labs/week12/places 1048573
+
